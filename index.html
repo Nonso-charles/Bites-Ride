@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Truck Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom dropdown hover effect */
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="burger.png" alt="Food Truck Logo" class="w-12 h-12 rounded-full">
+                <span class="text-2xl font-bold text-red-600">Bite and Ride</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-gray-700 hover:text-red-600 font-medium">Home</a>
+                <a href="#menu" class="text-gray-700 hover:text-red-600 font-medium">Menu</a>
+                <a href="#locations" class="text-gray-700 hover:text-red-600 font-medium">Locations</a>
+                <a href="#about" class="text-gray-700 hover:text-red-600 font-medium">About Us</a>
+                <a href="#contact" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 font-medium">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 hover:text-red-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden">
+            <div class="flex flex-col space-y-4 px-6 pb-4">
+                <a href="#home" class="text-gray-700 hover:text-red-600 font-medium">Home</a>
+                <a href="#menu" class="text-gray-700 hover:text-red-600 font-medium">Menu</a>
+                <a href="#locations" class="text-gray-700 hover:text-red-600 font-medium">Locations</a>
+                <a href="#about" class="text-gray-700 hover:text-red-600 font-medium">About Us</a>
+                <a href="#contact" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-6 py-16">
+            <!-- Text Section -->
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Welcome to <span class="text-red-600">Bite and Ride</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Serving delicious, mouth-watering dishes on the go! Join us for an unforgettable street food experience.
+                </p>
+                <a href="#menu" class="inline-block bg-red-600 text-white text-lg font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-red-700 transition duration-300">
+                    View Our Menu
+                </a>
+            </div>
+
+            <!-- Image Section -->
+            <div class="md:w-1/2">
+                <img src="hero-img.jpeg" alt="Food Truck" class="w-full rounded-lg shadow-md">
+            </div>
+        </div>
+    </section <!-- About Us -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-6">
+            <!-- Image Section -->
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <img src="about-us.jpeg" alt="Food Truck" class="w-full rounded-lg shadow-md">
+            </div>
+
+            <!-- Text Section -->
+            <div class="md:w-1/2 md:pl-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    About <span class="text-red-600">Bite & Ride</span>
+                </h2>
+                <p class="text-gray-600 mb-6">
+                    At Bite & Ride, we believe that great food is an experience meant to be shared. From our humble beginnings serving our local community to becoming a beloved part of the neighborhood, we take pride in crafting dishes that bring people together. Our food truck is more than just a kitchen on wheels—it's a passion project fueled by love for unique flavors and fresh, high-quality ingredients.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    Our team is dedicated to delivering mouth-watering meals and a fun, welcoming atmosphere wherever we go. Whether you're looking for a quick bite or a culinary journey, Bite & Ride is here to make your day delicious.
+                </p>
+                <a href="#contact" class="inline-block bg-red-600 text-white text-lg font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-red-700 transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">Our Menu</h2>
+            <p class="text-gray-600 mt-4">Fresh, delicious, and made with love. Explore our variety of mouth-watering dishes!</p>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Menu Item -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="tacos.jpeg" alt="Dish 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800">Spicy Taco Trio</h3>
+                    <p class="text-gray-600 mt-2">A trio of soft tacos filled with our signature seasoned beef, fresh veggies, and spicy sauce.</p>
+                    <div class="mt-4 text-red-600 font-bold text-lg">$12.99</div>
+                </div>
+            </div>
+
+            <!-- Menu Item -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="juicy-burger.png" alt="Dish 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800">Classic Burger</h3>
+                    <p class="text-gray-600 mt-2">Juicy grilled beef patty, lettuce, tomato, and our homemade sauce on a toasted bun.</p>
+                    <div class="mt-4 text-red-600 font-bold text-lg">$10.49</div>
+                </div>
+            </div>
+
+            <!-- Menu Item -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="loaded-fries.jpeg" alt="Dish 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800">Loaded Fries</h3>
+                    <p class="text-gray-600 mt-2">Crispy fries topped with melted cheese, bacon bits, jalapenos, and a drizzle of special sauce.</p>
+                    <div class="mt-4 text-red-600 font-bold text-lg">$8.99</div>
+                </div>
+            </div>
+
+            <!-- Add more menu items as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800">Find Us Here</h2>
+        <p class="text-gray-600 mt-4">Come visit us and enjoy your favorite dishes in person. Check out our current location and schedule below!</p>
+      </div>
+
+      <!-- Location Details -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Map Embed -->
+        <div class="h-64 md:h-full overflow-hidden rounded-lg shadow-lg">
+          <iframe 
+            class="w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1808399346016!2d-122.41941608468774!3d37.77492977975961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a63d59b13%3A0x0!2z0KHQvdC40LLQtdGA0L7QtNC40Y8!5e0!3m2!1sen!2sus!4v1639527039229!5m2!1sen!2sus"
+            frameborder="0"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- Contact and Details -->
+        <div class="flex flex-col justify-center">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Current Location</h3>
+          <p class="text-gray-600 mb-6">
+            You can find us at <span class="font-medium text-red-600">41 Road F close Festac Town, Lagos</span>. We're serving up your favorites from <strong>11:00 AM</strong> to <strong>8:00 PM</strong>, Monday through Saturday.
+          </p>
+          <div class="mt-4">
+            <h4 class="text-lg font-medium text-gray-800">Contact Us</h4>
+            <p class="text-gray-600 mt-2">Phone: <a href="tel:+1234567890" class="text-red-600">+1 234-567-890</a></p>
+            <p class="text-gray-600">Email: <a href="mailto:info@flavorwheels.com" class="text-red-600">info@flavorwheels.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+   <section class="py-16 bg-white">
+     <div class="container mx-auto px-6">
+         <!-- Section Title -->
+         <div class="text-center mb-12">
+             <h2 class="text-4xl font-bold text-gray-800">Get in Touch</h2>
+             <p class="text-gray-600 mt-4">Have questions or need catering? Reach out to us, and we’ll get back to you as soon as possible!</p>
+         </div>
+
+         <!-- Contact Form and Info -->
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+             <!-- Contact Form -->
+             <div>
+                 <form action="#" method="POST" class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                     <div class="mb-4">
+                         <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                         <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                     </div>
+                     <div class="mb-4">
+                         <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                         <input type="email" id="email" name="email" placeholder="example@email.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                     </div>
+                     <div class="mb-4">
+                         <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                         <textarea id="message" name="message" rows="4" placeholder="Write your message here..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                     </div>
+                     <button type="submit" class="w-full bg-red-600 text-white text-lg font-medium py-2 rounded-lg hover:bg-red-700 transition duration-300">
+                         Send Message
+                     </button>
+                 </form>
+             </div>
+
+             <!-- Contact Details -->
+             <div class="flex flex-col justify-center">
+                 <h3 class="text-2xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+                 <p class="text-gray-600 mb-6">Feel free to reach out to us for any inquiries, bookings, or catering requests. We’re here to help!</p>
+                 <div class="mb-4">
+                     <h4 class="text-lg font-medium text-gray-800">Phone</h4>
+                     <p class="text-red-600 mt-2"><a href="tel:+1234567890" class="hover:underline">+1 234-567-890</a></p>
+                 </div>
+                 <div class="mb-4">
+                     <h4 class="text-lg font-medium text-gray-800">Email</h4>
+                     <p class="text-red-600 mt-2"><a href="mailto:info@flavorwheels.com" class="hover:underline">info@BiteandRide.com</a></p>
+                 </div>
+                 <div>
+                     <h4 class="text-lg font-medium text-gray-800">Location</h4>
+                     <p class="text-gray-600 mt-2">41 Road F Close Festac Town, Lagos</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+ 
+ <!-- Footer Section -->
+   <footer class="bg-gray-800 text-gray-300 py-12">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Branding -->
+          <div>
+              <h2 class="text-2xl font-bold text-white mb-4">Bite & Ride</h2>
+              <p class="text-gray-400 mb-6">
+                  Serving up the best flavors on the go. Come find us and savor delicious bites wherever you are.
+              </p>
+              <a href="#" class="text-red-500 hover:text-red-400">Join our newsletter</a>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                  <li><a href="#menu" class="hover:text-red-500">Menu</a></li>
+                  <li><a href="#about" class="hover:text-red-500">About Us</a></li>
+                  <li><a href="#location" class="hover:text-red-500">Locations</a></li>
+                  <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
+              </ul>
+          </div>
+
+          <!-- Contact & Social Media -->
+          <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Contact Us</h3>
+              <p class="text-gray-400">
+                  Phone: <a href="tel:+1234567890" class="text-red-500 hover:underline">+1 234-567-890</a>
+              </p>
+              <p class="text-gray-400 mb-6">
+                  Email: <a href="mailto:info@BiteandRide.com" class="text-red-500 hover:underline">info@BitesandRide.com</a>
+              </p>
+              <div class="flex space-x-4">
+                  <a href="#" class="text-gray-400 hover:text-red-500"><img src="instagram.png" alt="instagram.png" class="w-10 h-10"></a>
+                  <a href="#" class="text-gray-400 hover:text-red-500"><img src="tik-tok.png" alt="tik-tok.png" class="w-10 h-10"></a>
+                  <a href="#" class="text-gray-400 hover:text-red-500"><img src="youtube.png" alt="youtube.png" class="w-10 h-10"></a>
+              </div>
+          </div>
+      </div>
+      <div class="mt-8 text-center text-gray-500 border-t border-gray-700 pt-6">
+          <p>&copy; 2024 Bites & Ride. All rights reserved.</p>
+      </div>
+  </footer>
+
+    <script>
+        // Mobile menu toggle script
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
